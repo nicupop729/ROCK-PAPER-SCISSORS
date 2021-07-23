@@ -49,7 +49,7 @@ const playRound = function (playerSelection, computerSelection) {
       (compScissors && guessRock)
     ) {
       console.log(
-        `You Win this round! ${playerSelection.toUpperCase()} beats ${computerSelection.toUpperCase()}`
+        `You Won this round! ${playerSelection.toUpperCase()} beats ${computerSelection.toUpperCase()}`
       );
       return (playerScore += 1);
     }
@@ -59,7 +59,7 @@ const playRound = function (playerSelection, computerSelection) {
       (compScissors && guessPaper)
     ) {
       console.log(
-        `You Lose this round! ${computerSelection.toUpperCase()} beats ${playerSelection.toUpperCase()}`
+        `You Lost this round! ${computerSelection.toUpperCase()} beats ${playerSelection.toUpperCase()}`
       );
       return (compScore += 1);
     }
@@ -84,7 +84,7 @@ const game = function (_) {
 
   const winner = function (_) {
     if (playerScore > compScore)
-      return `You WIN the game with the general score of ${playerScore} : ${compScore}`;
+      return `You WON the game with the general score of ${playerScore} : ${compScore}`;
     else if (playerScore < compScore)
       return `You LOST the game with the general score of ${compScore} : ${playerScore}`;
     else if (playerScore === compScore)
